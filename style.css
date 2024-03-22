@@ -11,7 +11,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: seagreen;
+  background: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 
@@ -19,7 +21,9 @@ body {
   position: absolute;
   width: 400px;
   height: 555px;
-  background: purple;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   padding: 20px;
   color: white;
@@ -98,27 +102,37 @@ body {
   font-weight: 500;
   text-transform: capitalize;
 }
-
-.weather-details{
+.weather-detail{
   position: absolute;
   bottom: 40px;
-  left : 0;
+  left: 0;
   width: 100%;
   padding: 0 20px;
   display: flex;
-
 }
-.weather-details .humidity,
-.weather-details .wind{
-display: flex;
-align-items: center;
-width: 50%;
+.weather-detail .humidity,
+.weather-detail .wind{
+  display: flex;
+  align-items: center;
+  width: 50%;
 }
-.weather-details .humidity box-icon,
-.weather-details .wind box-icon{
-  height: 85px;
-  margin-right: 20px;
+.weather-detail .humidity{
+  padding-left: 30px;
+  justify-content: flex-start;
 }
-.cls-ico{
-  height: 65px;
+.weather-detail .wind{
+  padding-right: 40px;
+  justify-content: flex-end;
+}
+.weather-detail box-icon{
+  margin-right: 10px;
+}
+.weather-detail span{
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+}
+.weather-detail p{
+  font-size: 14px;
+  font-weight: 600;
 }
