@@ -33,6 +33,7 @@ searchButton.addEventListener('click', () => {
       switch (json.weather[0].main.toLowerCase()) {
         case "clear":
           container.style.background = "linear-gradient(to right bottom, #fddb92, #d1fdff)";
+          container.style.color = "black";
           image.src = './images/clear.png';
           break;
         case "rain":
